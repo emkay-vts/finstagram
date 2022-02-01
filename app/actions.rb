@@ -24,7 +24,7 @@ end
 
 get '/' do
 
-    finstagram_post_avatar_airb = {
+    @finstagram_post_avatar_airb = {
         user_name: "avatar_airb",
         avatar_url: "http://naserca.com/images/sharky_j.jpg",
         photo_url: "http://naserca.com/images/shark.png",
@@ -41,7 +41,7 @@ get '/' do
         }]
     }
 
-    finstagram_post_whale = {
+    @finstagram_post_whale = {
         user_name: "kirk_whalum",
         avatar_url: "http://naserca.com/images/kirk_whalum.jpg",
         photo_url: "http://naserca.com/images/whale.jpg",
@@ -55,7 +55,7 @@ get '/' do
         }]
     }
 
-    finstagram_post_marlin = {
+    @finstagram_post_marlin = {
         user_name: "marlin_peppa",
         avatar_url: "http://naserca.com/images/marlin_peppa.jpg",
         photo_url: "http://naserca.com/images/marlin.jpg",
@@ -69,6 +69,8 @@ get '/' do
         }]
     }
 
-    [finstagram_post_avatar_airb, finstagram_post_whale, finstagram_post_marlin].to_s
 
+    @finstagram_posts = [@finstagram_post_avatar_airb, @finstagram_post_whale, @finstagram_post_marlin]
+
+    erb(:index)
 end
