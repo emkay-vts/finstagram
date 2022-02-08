@@ -1,3 +1,11 @@
+get '/' do
+   
+    @finstagram_posts = FinstagramPost.order(created_at: :desc)
+    erb(:index)
+
+end
+
+
 =begin
 get '/' do
     File.read(File.join('app/views','index.html'))
@@ -8,7 +16,7 @@ get '/' do
     "Hello world!"
 end
 
-=end
+
 
 
 def humanized_time_ago (minutes_var)
@@ -74,3 +82,6 @@ get '/' do
 
     erb(:index)
 end
+
+=end
+
